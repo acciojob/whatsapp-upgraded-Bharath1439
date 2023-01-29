@@ -11,14 +11,6 @@ public class Message {
 
     private User user;
 
-    public Group getGroup() {
-        return group;
-    }
-
-    public void setGroup(Group group) {
-        this.group = group;
-    }
-
     public User getUser() {
         return user;
     }
@@ -27,7 +19,16 @@ public class Message {
         this.user = user;
     }
 
-    public Message() {
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
     }
 
     public int getId() {
@@ -50,9 +51,6 @@ public class Message {
         return timestamp;
     }
 
-    public void setTimestamp(Date timestamp) {
-        this.timestamp = timestamp;
-    }
     public void setTimestamp() {
         this.timestamp = new Date();
     }
@@ -61,5 +59,14 @@ public class Message {
         this.id = id;
         this.content = content;
         this.timestamp = timestamp;
+    }
+
+    public Message(int id, String content) {
+        this.id = id;
+        this.content = content;
+        this.timestamp = new Date();
+    }
+
+    public Message(){
     }
 }

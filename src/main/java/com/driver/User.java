@@ -5,6 +5,7 @@ import java.util.List;
 
 public class User {
     private String name;
+    private String mobile;
 
     private List<Message> messageList= new ArrayList<>();
 
@@ -14,14 +15,6 @@ public class User {
 
     public void setMessageList(List<Message> messageList) {
         this.messageList = messageList;
-    }
-
-    public User(String name, String mobile) {
-        this.name = name;
-        this.mobile = mobile;
-    }
-
-    public User() {
     }
 
     public String getName() {
@@ -40,5 +33,11 @@ public class User {
         this.mobile = mobile;
     }
 
-    private String mobile;
+    public User(String name, String mobile) {
+        this.name = name;
+        this.mobile = mobile;
+    }
+
+    public User(){
+    }
 }

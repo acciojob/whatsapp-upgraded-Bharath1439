@@ -1,5 +1,6 @@
 package com.driver;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +10,6 @@ public class Group {
 
     private List<Message> messageList= new ArrayList<>();
 
-    public Group() {
-    }
 
     public List<Message> getMessageList() {
         return messageList;
@@ -39,5 +38,8 @@ public class Group {
     public Group(String name, int numberOfParticipants) {
         this.name = name;
         this.numberOfParticipants = numberOfParticipants;
+    }
+
+    public Group(){
     }
 }
